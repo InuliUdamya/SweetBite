@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SweetBite</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Booatrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style.css"/>
+
+    
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <style>
+     html {
+        scrollbar-width:normal;
+        scrollbar-color:#fa2178 #fcbad5;
+     }
+
+     html::-webkit-scrollbar{
+        width: 12px;
+     }
+
+     html::-webkit-scrollbar-thumb{
+        background-color: #fc63a0;
+     }
+
+     html::-webkit-scrollbar-thumb:hover{
+        background-color: #fa2178;
+     }
+
+     html::-webkit-scrollbar-track {
+        background-color: #fce1ec;
+     }
+
+     html::-webkit-scrollbar-track:hover{
+        background-color: #fcbad5;
+     }
+
+     
+
+     </style>
+  </head>
+
+  <body>
+     <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">
+          <img
+            src="IMAGES/logo.png"
+            alt="SweetBite"
+            width="70"
+            height="60"
+          />
+        </a>
+        <a class="navbar-brand me-auto" href="#"><b>SweetBite</b></a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand me-auto" href="#">
+              <img
+                src="IMAGES/logo.png"
+                alt="SweetBite"
+                width="80"
+                height="60"
+              />
+            </a>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <b>SweetBite</b>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="shop.html">SHOP</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="cart-icon">
+          <a href="shop.html" class="login-button">
+          <i class="ri-shopping-cart-2-line"></i>
+          <span class="cart-item-count"></span>
+          </a>
+        </div>
+
+       
+
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <script src="JS/script.js"></script>
+
+
+
+<!--hero section-->
+<div class="aboutus">
+  <div class="circles"></div>
+        <div class="aboutus__data">
+                <h2 class="aboutus__title">
+                    OUR SWEET STORY
+                </h2>
+
+                <p class="aboutus__discription">
+                    A little bakery filled with love, pastel colours, and cupcakes that make every moment softer.
+                </p>
+        </div>
+</div>
+
+
+<!-- about us -->
+ <section class="aboutcup">
+  <div class="about-box">
+    <h2 class="about-main-title">SweetBite</h2>
+    <p class="about-discription">Baked with love. Shared with smiles.</p>
+  <div class="about-grid">
+    <div class="story">
+    <h2 class="about-title">Who We Are</h2>
+    <p class="about-text">
+      At SweetBite, we bake fresh, handcrafted cupcakes made to brighten your day. 
+      Every cupcake is created with quality ingredients and a whole lot of love.
+    </p>
+    </div>
+
+    <div class="story">
+    <h2 class="about-title">Our Story</h2>
+    <p class="about-text">
+      What started as a small home kitchen passion has grown into a sweet space 
+      where creativity and flavour meet. From classic favourites to fun new flavours, 
+      we’re here to make every bite unforgettable.
+    </p>
+
+     <img src="IMAGES/heart icon.png" alt="image" class="aboutus__heart-1">
+     <img src="IMAGES/heart icon.png" alt="image" class="aboutus__heart-2">
+    </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+ 
+<!-- footer -->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>About Us</h2>
+                <a href="about.html">How it works</a>
+                <a href="about.html">Testimonials</a>
+                <a href="about.html">Careers</a>
+                <a href="about.html">Investments</a>
+                <a href="about.html">Terms of Services</a>
+            </div>
+             <div class="footer__link--items">
+                <h2>Contact Us</h2>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Destinations</a>
+                <a href="contact.html">Sponsorships</a>
+            </div>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Videos</h2>
+                <a href="shop.html">Submit videos</a>
+                <a href="shop.html">Ambassadors</a>
+                <a href="shop.html">Agency</a>
+                <a href="shop.html">Influencer</a>
+            </div>
+             <div class="footer__link--items">
+                 <h2>Social Media</h2>
+                <a href="contact.html">Instagram</a>
+                <a href="contact.html">Facebook</a>
+                <a href="contact.html">Youtube</a>
+                <a href="contact.html">Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <form action="https://www.google.com/search" method="get" class="search__bar">
+      <input type="text" placeholder="search anything" name="q">
+      <button class="submit"><i class="ri-search-eye-line"></i></button>
+    </form>
+
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="" id="footer__logo"> 
+               <img
+                src="IMAGES/logo.png"
+                alt="SweetBite"
+                width="70"
+                height="60"
+                class="footer__img"
+              />
+               <a class="footer__brand me-auto" href="#"><b>SweetBite</b></a>
+              </a>
+            </div>
+            <p class="website__rights">© SweetBite 2025. All rights reserved | Designed by Inuli</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Booatrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="JS/app.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+
+  ScrollReveal().reveal('.navbar', {
+    origin: 'top',     
+    distance: '50px', 
+    duration: 1000,    
+    delay: 200,       
+    easing: 'ease-in-out',
+    reset: true      
+  });
+  
+  ScrollReveal().reveal('.aboutus__data', {
+    origin: 'bottom',   
+    distance: '50px',   
+    duration: 1000,    
+    delay: 200,        
+    easing: 'ease-in-out',
+    reset: false        
+  });
+
+</script>
+
+  </body>
+</html>
+

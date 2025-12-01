@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SweetBite</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Booatrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <style>
+     html {
+        scrollbar-width:normal;
+        scrollbar-color:#fa2178 #fcbad5;
+     }
+
+     html::-webkit-scrollbar{
+        width: 12px;
+     }
+
+     html::-webkit-scrollbar-thumb{
+        background-color: #fc63a0;
+     }
+
+     html::-webkit-scrollbar-thumb:hover{
+        background-color: #fa2178;
+     }
+
+     html::-webkit-scrollbar-track {
+        background-color: #fce1ec;
+     }
+
+     html::-webkit-scrollbar-track:hover{
+        background-color: #fcbad5;
+     }
+
+     
+
+     </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">
+          <img
+            src="IMAGES/logo.png"
+            alt="SweetBite"
+            width="70"
+            height="60"
+          />
+        </a>
+        <a class="navbar-brand me-auto" href="#"><b>SweetBite</b></a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a class="navbar-brand me-auto" href="#">
+              <img
+                src="IMAGES/logo.png"
+                alt="SweetBite"
+                width="80"
+                height="60"
+              />
+            </a>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <b>SweetBite</b>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="shop.html">SHOP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="cart-icon">
+          <i class="ri-shopping-cart-2-line"></i>
+          <span class="cart-item-count"></span>
+        </div>
+
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+
+    
+<!--hero section-->
+<div class="shopping">
+  <div class="circles"></div>
+        <div class="shopping__data">
+                <h2 class="shopping__title">
+                    PICK YOUR SWEETNESS
+                </h2>
+
+                <p class="shopping__discription">
+                   Freshly baked delights, ready to make your day sweeter.
+                </p>
+        </div>
+</div>
+
+
+<!-- products -->
+ <div class="products">
+<section class="filters">
+<button class="filter-btn active" data-cat="all">All</button>
+<button class="filter-btn" data-cat="cupcakes">Cupcakes</button>
+<button class="filter-btn" data-cat="jarcakes">Jar Cakes</button>
+<button class="filter-btn" data-cat="cookies">Cookies</button>
+</section>
+
+<div class="cart">
+  <h2 class="cart-title">Your Cart</h2>
+  <div class="cart-content">
+    <!-- <div class="cart-box">
+      <img src="IMAGES/cookie 1.png" class="cart-img">
+      <div class="cart-detail">
+        <h2 class="cart-product-title">choco cookie</h2>
+        <span class="cart-price">RS.450</span>
+        <div class="cart-quantity">
+          <button id="decrement">-</button>
+          <span class="number">1</span>
+          <button id="increment">+</button>
+        </div>
+      </div>
+      <i class="ri-delete-bin-5-line cart-remove"></i>
+    </div> -->
+  </div>
+  <div class="total">
+    <div class="total-title">Total</div>
+    <div class="total-price">Rs.0</div>
+  </div>
+  <button class="btn-buy">Buy Now</button>
+  <i class="ri-close-circle-line" id="cart-close"></i>
+</div>
+
+
+<section class="shop active" data-cat="all">
+  <h1 class="section-title">Our Full Collection</h1>
+<div class="product">
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 1.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Little Ginger</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.100</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 2.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Berry Burst</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.350</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 1.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Mini Delight</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.500</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 4.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Sapphire Swirl</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 2.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Honeyed Bliss</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.420</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 8.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">
+      Little Snowman
+    </h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.120</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 13.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Mocha Mousse</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.370</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 6.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Cocoa Cloud</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.399</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/cookie 12.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Snowflake Crunch</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.135</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/jarcake 11.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Mango Magic</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/cupcake 14.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Tiny Treat</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.300</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section class="shop " data-cat="cupcakes">
+  <h1 class="section-title">Delicious Cupcakes</h1>
+<div class="product">
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 10.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Cupcake Cloud</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.250</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 11.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Banana Cupcake</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.380</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 13.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Mocha Magic</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 15.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Dream</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.390</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 3.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Sprinkle Joy</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.400</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 5.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Sweet Whirl</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.300</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 7.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Choco Royale</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.480</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cupcake 8.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Frosty Deight</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.320</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/cupcake 9.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Love Bite</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.500</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/cupcake 12.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Lemon Zest</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  
+  <div class="product-box">
+    <img src="IMAGES/cupcake 16.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Clocolate Bliss</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section class="shop " data-cat="jarcakes">
+  <h1 class="section-title">Sweet Jar Cakes</h1>
+<div class="product">
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 3.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Strawberry Dream</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 4.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Raspberry Ripple</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.400</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 10.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Cinnamon Crunch</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.350</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 9.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Biscuit Bliss</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.350</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 12.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Raspberry Bliss</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.400</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 14.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Blueberry Burst</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.480</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 5.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Nutty Cashew Jar</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.450</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/jarcake 1.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Juicy Layers</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.500</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section class="shop" data-cat="cookies">
+  <h1 class="section-title">Freshly Baked Cookies</h1>
+<div class="product">
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 11.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Buttercream Star Cookie</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.100</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 13.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Winter Whisk Cookie</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.150</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 10.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Frosted Star Cookie</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.100</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 5.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Hollyhoof Cookie</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.120</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 14.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">
+      Linzer Star
+    </h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.110</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="product-box">
+    <img src="IMAGES/cookie 6.png" alt="">
+    <div class="product__box">
+    <h2 class="product-title">Floral Treat Cookie</h2>
+    <div class="price-and-cart">
+    <span class="price">Rs.100</span>
+    <i class="ri-shopping-cart-2-line add-cart" ></i>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+
+</div>
+
+<script src="JS/script.js"></script>
+
+
+
+<!-- footer -->    
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>About Us</h2>
+                <a href="about.html">How it works</a>
+                <a href="about.html">Testimonials</a>
+                <a href="about.html">Careers</a>
+                <a href="about.html">Investments</a>
+                <a href="about.html">Terms of Services</a>
+            </div>
+             <div class="footer__link--items">
+                <h2>Contact Us</h2>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Destinations</a>
+                <a href="contact.html">Sponsorships</a>
+            </div>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Videos</h2>
+                <a href="shop.html">Submit videos</a>
+                <a href="shop.html">Ambassadors</a>
+                <a href="shop.html">Agency</a>
+                <a href="shop.html">Influencer</a>
+            </div>
+             <div class="footer__link--items">
+                 <h2>Social Media</h2>
+                <a href="contact.html">Instagram</a>
+                <a href="contact.html">Facebook</a>
+                <a href="contact.html">Youtube</a>
+                <a href="contact.html">Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <form action="https://www.google.com/search" method="get" class="search__bar">
+      <input type="text" placeholder="search anything" name="q">
+      <button class="submit"><i class="ri-search-eye-line"></i></button>
+    </form>
+
+
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="" id="footer__logo"> 
+               <img
+                src="IMAGES/logo.png"
+                alt="SweetBite"
+                width="70"
+                height="60"
+                class="footer__img"
+              />
+               <a class="footer__brand me-auto" href="#"><b>SweetBite</b></a>
+              </a>
+            </div>
+            <p class="website__rights">© SweetBite 2025. All rights reserved | Designed by Inuli</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Booatrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script src="JS/script.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+  ScrollReveal().reveal('.navbar', {
+    origin: 'top',     
+    distance: '50px', 
+    duration: 1000,    
+    delay: 200,       
+    easing: 'ease-in-out',
+    reset: true      
+  });
+
+  ScrollReveal().reveal('.shopping__data', {
+    origin: 'bottom',   
+    distance: '50px',   
+    duration: 1000,    
+    delay: 200,        
+    easing: 'ease-in-out',
+    reset: false        
+  });
+</script>
+
+  </body>
+</html>
